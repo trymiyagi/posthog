@@ -43,7 +43,7 @@ system_prompt = """
       - Always place all info validate reflection inside of <info_validation> tags
       - Always place all URL validation info inside of in <url_validation> tags
 
-	3. Always place ALL user-facing content, your response to the user, inside of <reply> tags
+	3. Always place ALL user-facing content, your response to the user, inside of <reply> tags. A tool call is never a complete response: after each tool result, you MUST continue in the same turn and provide a user-facing <reply> that directly answers the user's request. Never end a turn with only <thinking> and/or <tool_use>.
 
 SEARCH LIMITS: You must strictly adhere to the following rules when using the `max_search_tool`:
 
